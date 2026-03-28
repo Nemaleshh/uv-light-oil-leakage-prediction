@@ -3,7 +3,8 @@
 
 This project is a computer vision application developed for **Stellantis**, designed to automate the visual inspection of vehicle engines for oil leaks on the assembly line. By utilizing UV lighting and fluorescent dye added to the engine fluids, this application detects leaks via bright light-blue/cyan glows on the engine block, oil pan, and surrounding chassis components.
 
-![alt text](phott.png)
+
+<img width="1920" height="1080" alt="phott" src="https://github.com/user-attachments/assets/a9bcdde3-a3ef-40c2-a28e-10c442a724dd" />
 
 ## Features
 
