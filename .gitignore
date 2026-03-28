@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+reports/
+recorded_video/
+detected_images/
+build/
+dist/
+*.spec
+*.jpg
+*.png
+.DS_Store
