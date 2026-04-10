@@ -42,20 +42,38 @@ app/
 └── main.py              # Application entry point binding UI and Core
 ```
 
-## How to Run
+## Installation & Setup
 
-1. Ensure Python 3.10+ is installed on your system.
-2. Install the required packages via `pip`:
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/Nemaleshh/uv-light-oil-leakage-prediction.git
+   cd uv-light-oil-leakage-prediction
+   ```
+
+2. **Create a Python Virtual Environment (Optional but Recommended):**
+   ```bash
+   python -m venv .venv
+   .venv\Scripts\activate  # On Windows
+   source .venv/bin/activate  # On macOS/Linux
+   ```
+
+3. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-   *(Requirements generally include `opencv-python`, `numpy`, `PyQt5`, `pandas`, `openpyxl`)*
+   *(Core dependencies: `opencv-python`, `numpy`, `PyQt5`, `pandas`, `openpyxl`, `jupyter`)*
 
-3. Launch the application:
-   ```bash
-   python app/main.py
-   ```
-   *(Alternatively, run `run_dev.bat` on Windows for a cleaner boot)*
+## How to Run
+
+### Standard Mode
+```bash
+python app/main.py
+```
+
+### Development Mode (Windows)
+```bash
+run_dev.bat
+```
 
 ## Usage Guide
 
@@ -64,3 +82,58 @@ app/
 3. **Scan:** Click **Start Inspection**. The application will trigger a countdown, perform a single-frame capture analysis, and log the test. 
 4. **Results:** If a leak is detected, an overlay will display "OIL LEAK DETECTED", a red bounding box will track the leak coordinates, and the "Failed" inspection counter increments.
 5. **Get Report:** Click "Generate / Open Report" to open a spreadsheet mapping each scanned WIN to its Pass/Fail grade and time-stamped inspection image.
+
+## Analysis & Data Science
+
+The project includes Jupyter notebooks for data exploration and model analysis:
+- **`analysis/analysis.ipynb`**: Primary analysis and model evaluation workflows
+- **`analysissss/ana.ipynb`**: Additional experimental analysis and dataset exploration
+
+Run analysis notebooks with:
+```bash
+jupyter notebook analysis/analysis.ipynb
+```
+
+## Output & Artifacts
+
+- **`detected_images/`**: Stores high-resolution inspection snapshots with leak annotations.
+- **`reports/`**: Contains auto-generated Excel and CSV inspection reports with timestamps and pass/fail records.
+- **Build folder**: Compiled application binaries are generated here during build process.
+
+## Build & Deployment
+
+To build a standalone executable (Windows):
+```bash
+build.bat
+```
+
+The compiled application (`UV_OilLeak_Detection.exe`) will be available in the `dist/` folder.
+
+## Configuration
+
+Edit `config.json` to customize:
+- Camera settings (resolution, frame rate, brightness)
+- HSV color range thresholds for dye detection
+- Detection sensitivity and area filtering parameters
+- Report export formats and output paths
+
+## Troubleshooting
+
+- **Camera not detected**: Verify USB connection or IP camera URL accessibility.
+- **False positives**: Adjust HSV thresholds in `config.json` or review dark mode lighting conditions.
+- **Slow detection**: Reduce camera resolution or check system CPU/memory usage.
+- **Report generation errors**: Ensure `reports/` directory exists and has write permissions.
+
+## Contributing
+
+This is a proprietary industrial quality control system developed for **Stellantis**. Contributions are welcome for bug fixes and performance improvements.
+
+## License
+
+This project is proprietary to **Stellantis** and should not be distributed without authorization.
+
+---
+
+**Last Updated:** April 2026  
+**Version:** 1.0  
+**Status:** Production-Ready
