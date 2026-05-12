@@ -1,0 +1,23 @@
+{
+  "camera_index": 0,
+  "model_path": "C:\\Users\\hnema\\OneDrive\\Desktop\\stellatis\\newengil2\\newengil\\app_v2\\models\\best.pt",
+  "clf_path": "C:\\Users\\hnema\\OneDrive\\Desktop\\stellatis\\newengil2\\newengil\\app_v2\\models\\gb_classifier.pkl",
+  "hold_seconds": 30,
+  "threshold_pct": 0.15,
+  "uv_max_on_minutes": 120,
+  "mongo_uri": "mongodb+srv://nemaleshwaroffl_db_user:pmzDglmYlWuDTYes@uv.ayiq192.mongodb.net",
+  "mongo_db": "uv_inspection",
+  "email_sender": "nemaleshwaroffl@gmail.com",
+  "email_password": "vokbgpxzftsxduzr",
+  "email_recipients": [
+    "nemaleshwar.harikrishnan@external.stellantis.com"
+  ],
+  "report_time": "20:00",
+  "roi": {
+    "x1_pct": 0.2986,
+    "y1_pct": 0.0232,
+    "x2_pct": 0.9205,
+    "y2_pct": 0.9614,
+    "note": "Drawn by roi_calibrator.py \u2014 YOLO detections outside this zone are rejected"
+  }
+}

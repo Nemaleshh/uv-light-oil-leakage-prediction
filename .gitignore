@@ -1,0 +1,72 @@
+# ── Python cache ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env
+
+# ── PyInstaller build & dist ──────────────────────────────────────────────────
+app_v2/dist/
+app_v2/build/
+app_v2/bin/
+app_v2/dist.zip
+*.zip
+*.spec
+
+# ── ML Models (too large for GitHub — use Git LFS or release assets) ─────────
+*.pt
+*.pth
+*.pkl
+*.onnx
+*.h5
+*.pb
+
+# ── Image datasets & crops (large binary files) ───────────────────────────────
+oilleak/
+nonoil leak/
+all_inspected_images/
+new_pipeline/
+new_data/
+data_v2/
+summary/
+cnn_dataset/
+yolo_training/
+app_v2/detected_images/
+test/
+
+# ── Generated reports & logs ─────────────────────────────────────────────────
+*.html
+*.txt
+*.png
+retrain_output*.txt
+evaluate_accuracy_report.txt
+stellantis_*.html
+session_summary_*.html
+
+# ── IDE & OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ── Data files ────────────────────────────────────────────────────────────────
+*.csv
+*.yaml
+data.yaml
+
+# ── Zip archives ──────────────────────────────────────────────────────────────
+MAIN.zip
